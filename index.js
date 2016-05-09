@@ -4,5 +4,5 @@ module.exports = {
  , get_details: require("./plugin/get_file_details")
  , postcss: require("./plugin/postcss_build")
  , read_css: require("./plugin/read_css")
- , watch_css: require("./plugin/watcher")
+ , watch_css: require("./plugin/watch_css")
 }
