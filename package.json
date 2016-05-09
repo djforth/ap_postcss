@@ -4,10 +4,14 @@
   "description": "Module for handling PostCSS",
   "main": "index.js",
   "eslintConfig": {
-    "extends": "morsedigital"
+    "extends": "morsedigital",
+    "rules": {
+      "no-console":[0]
+    }
   },
   "dependencies": {
     "commander": "^2.9.0",
+    "event-stream": "^3.3.2",
     "lodash": "^4.11.1",
     "postcss": "^5.0.19"
   },
@@ -18,7 +22,7 @@
     "eslint-config-morsedigital": "^1.0.4",
     "mocha": "^2.4.5"
   },
-  "peerDependancies":{
+  "peerDependancies": {
     "@djforth/ap_utils": "~2.0.13"
   },
   "scripts": {

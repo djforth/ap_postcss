@@ -1,11 +1,11 @@
 #! /usr/bin/env node
 
-var _       = require("lodash")
- , config   = require("../plugin/config")
- , fs       = require('fs')
- , PostCSS  = require('../plugin/postcss_build')
- , program  = require('commander')
- , watch    = require("@djforth/ap_utils").watcher;
+var _      = require("lodash")
+ , Build   = require('../plugin/build_folder')
+ , config  = require("../plugin/config")
+ , fs      = require('fs')
+ , program = require('commander')
+ , Watch   = require("../plugin/watch_css");
 
 
  program
@@ -25,15 +25,8 @@ options.forEach(function(op){
   }
 });
 
-fs.readFile('/etc/hosts', 'utf8', function (err,data) {
-  if (err) {
-    return console.log(err);
-  }
-  console.log(data);
-});
-
-var imgmin = Imagemin();
-
 if(program.watch){
-  watch(config.get("input")).onAdd(imgmin);
+  Watch();
+} else {
+  Build();
 }
