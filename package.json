@@ -19,7 +19,7 @@
     "mocha": "^2.4.5"
   },
   "peerDependancies":{
-    "@djforth/ap_utils": "~2.0.13",
+    "@djforth/ap_utils": "~2.0.13"
   },
   "scripts": {
     "lint": "eslint plugin/*.js",
