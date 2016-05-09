@@ -14,8 +14,9 @@ var defaults = {
     , 'postcss-merge-rules'
     , 'postcss-cssnext'
     , 'cssnano'
+    , 'css-mqpacker'
   ]
-  , use: ['postcss-import']
+  , use: []
 };
 
 var config = utils(defaults, 'stylesheets');
