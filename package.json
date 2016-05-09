@@ -1,0 +1,41 @@
+{
+  "name": "@djforth/ap_postcss",
+  "version": "1.0.0",
+  "description": "Module for handling PostCSS",
+  "main": "index.js",
+  "eslintConfig": {
+    "extends": "morsedigital"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^4.11.1",
+    "postcss": "^5.0.19"
+  },
+  "devDependencies": {
+    "@djforth/ap_utils": "~2.0.13",
+    "chai": "^3.5.0",
+    "eslint": "^2.8.0",
+    "eslint-config-morsedigital": "^1.0.4",
+    "mocha": "^2.4.5"
+  },
+  "peerDependancies":{
+    "@djforth/ap_utils": "~2.0.13",
+  },
+  "scripts": {
+    "lint": "eslint plugin/*.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djforth/ap_postcss.git"
+  },
+  "keywords": [
+    "PostCSS"
+  ],
+  "author": "A Stainforth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djforth/ap_postcss/issues"
+  },
+  "homepage": "https://github.com/djforth/ap_postcss#readme"
+}
