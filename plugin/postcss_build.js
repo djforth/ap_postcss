@@ -1,4 +1,5 @@
 var  _       = require('lodash')
+  , path     = require('path')
   , postcss  = require('postcss');
 
 var config   = require('./config');
@@ -19,7 +20,7 @@ function sourcemap_path(map){
 }
 
 function create_path(name){
-  return config.get('output') + name;
+  return path.resolve(config.get('output'), name);
 }
 
 module.exports = function(css, fileName, mapName, cb){
