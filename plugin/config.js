@@ -13,7 +13,7 @@ var defaults = {
     , 'postcss-merge-longhand'
     , 'postcss-merge-rules'
     , 'postcss-cssnext'
-    , 'cssnano'
+    , 'autoprefixer'
     , 'css-mqpacker'
   ]
   , use: []
