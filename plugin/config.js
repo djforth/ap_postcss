@@ -12,8 +12,8 @@ var defaults = {
     'css-mqpacker'
     , 'postcss-merge-longhand'
     , 'postcss-merge-rules'
-    , 'postcss-cssnext'
     , 'autoprefixer'
+    , 'cssnano'
     , 'css-mqpacker'
   ]
   , use: []
