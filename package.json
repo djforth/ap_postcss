@@ -1,6 +1,6 @@
 {
   "name": "@djforth/ap_postcss",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Module for handling PostCSS",
   "main": "index.js",
   "eslintConfig": {
