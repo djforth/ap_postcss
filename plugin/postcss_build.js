@@ -49,5 +49,6 @@ module.exports = function(css, file, cb){
     if (post.map) create.file(create_path(file.map), post.map);
 
     if (_.isFunction(cb)) cb(file.name);
-  });
+  })
+  .catch((err)=>{console.error(err.stack);});
 };
