@@ -27,6 +27,9 @@
   "peerDependancies": {
     "@djforth/ap_utils": "~2.2.0"
   },
+  "bin": {
+    "asset-pipeline-postcss": "./bin/build.js"
+  },
   "scripts": {
     "lint": "eslint plugin/*.js",
     "test": "mocha"
