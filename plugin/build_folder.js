@@ -8,7 +8,7 @@ var config  = require('../plugin/config')
 
 module.exports = function(cb){
   var input = config.get('input');
-  var css_list = read(input, 'css');
+  var css_list = read(input, '*.css');
   css_list.on('end', function(){
     if (_.isFunction(cb)){
       cb();
