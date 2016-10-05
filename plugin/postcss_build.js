@@ -23,7 +23,7 @@ function create_path(name){
   return path.resolve(config.get('output'), name);
 }
 
-module.exports = function(css, fileName, mapName, cb){
+module.exports = function(css, file, cb){
   var plugins = addPlugins(config.get('plugins'));
   var usePlugins = addPlugins(config.get('use'));
   var pc = postcss(plugins);
@@ -32,22 +32,22 @@ module.exports = function(css, fileName, mapName, cb){
   });
 
   pc.process(css, {
-    from: fileName
-    , to: fileName
+    from: file.fullPath
     , annotation: true
     , map: {inline: false}
+    , parser: require('postcss-scss')
   })
   .then(function(post){
     post.warnings().forEach(function(warn){
       console.warn(warn.toString());
     });
 
-    create.file(create_path(fileName)
-      , post.css.toString() + sourcemap_path(mapName)
+    create.file(create_path(file.name)
+      , post.css.toString() + sourcemap_path(file.map)
     );
 
-    if (post.map) create.file(create_path(mapName), post.map);
+    if (post.map) create.file(create_path(file.map), post.map);
 
-    if (_.isFunction(cb)) cb(fileName);
+    if (_.isFunction(cb)) cb(file.name);
   });
 };

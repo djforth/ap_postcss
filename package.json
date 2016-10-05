@@ -22,7 +22,10 @@
     "chai": "^3.5.0",
     "eslint": "^3.7.1",
     "eslint-config-morsedigital": "^1.0.4",
-    "mocha": "^3.1.0"
+    "mocha": "^3.1.0",
+    "postcss-asset-url-rails": "^1.0.0",
+    "postcss-scss": "^0.3.1",
+    "precss": "^1.4.0"
   },
   "peerDependancies": {
     "@djforth/ap_utils": "~2.2.0"

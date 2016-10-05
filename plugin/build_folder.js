@@ -15,6 +15,7 @@ module.exports = function(cb){
     }
   })
   .pipe(es.mapSync(function(file){
+    if (file.name.match(/^_/)) return null;
     return file_details(file.fullPath, file.name);
   }))
   .pipe(es.through(function(file){

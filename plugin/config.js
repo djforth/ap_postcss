@@ -9,7 +9,9 @@ var defaults = {
     '*.css', '*.css.map', '*.gz'
   ]
   , plugins: [
-    'css-mqpacker'
+    'precss'
+    , 'postcss-asset-url-rails'
+    , 'css-mqpacker'
     , 'postcss-merge-longhand'
     , 'postcss-merge-rules'
     , 'autoprefixer'
