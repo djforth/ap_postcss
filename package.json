@@ -14,18 +14,18 @@
   "dependencies": {
     "commander": "^2.9.0",
     "event-stream": "^3.3.4",
-    "lodash": "^4.14.1",
-    "postcss": "^5.1.1"
+    "lodash": "^4.16.3",
+    "postcss": "^5.2.4"
   },
   "devDependencies": {
-    "@djforth/ap_utils": "~2.1.1",
+    "@djforth/ap_utils": "~2.2.0",
     "chai": "^3.5.0",
-    "eslint": "^3.2.2",
+    "eslint": "^3.7.1",
     "eslint-config-morsedigital": "^1.0.4",
-    "mocha": "^2.4.5"
+    "mocha": "^3.1.0"
   },
   "peerDependancies": {
-    "@djforth/ap_utils": "~2.0.13"
+    "@djforth/ap_utils": "~2.2.0"
   },
   "scripts": {
     "lint": "eslint plugin/*.js",
