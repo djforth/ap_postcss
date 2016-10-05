@@ -42,7 +42,7 @@ module.exports = function(css, file, cb){
       console.warn(warn.toString());
     });
 
-    create.file(create_path(file.name)
+    create.file(create_path(file.name + '.erb')
       , post.css.toString() + sourcemap_path(file.map)
     );
 
