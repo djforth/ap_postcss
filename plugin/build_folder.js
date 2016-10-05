@@ -19,9 +19,9 @@ module.exports = function(cb){
   }))
   .pipe(es.through(function(file){
     if (file){
-      this.pause();
+      var ps = es.pause();
       readCSS(file, function(){
-        this.resume();
+        ps.resume();
       }.bind(this));
     }
 

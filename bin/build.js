@@ -20,8 +20,8 @@ var _      = require("lodash")
 var options = ['ext', 'input', 'output', 'plugins']
 
 options.forEach(function(op){
-  if(!_.isEmpty(program[op]) || program[op]){
-    config.set(op, program[op])
+  if (!_.isEmpty(program[op]) || program[op]){
+    config.set(op, program[op]);
   }
 });
 
